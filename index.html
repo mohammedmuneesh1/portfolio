@@ -455,31 +455,30 @@
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name" name="name"
-                                        required="required" data-validation-required-message="Please enter your name" />
+                                        required data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group col-sm-6">
                                     <input type="email" class="form-control p-4" id="email" placeholder="Your Email" name="email"
-                                        required="required" data-validation-required-message="Please enter your email" />
+                                        data-validation-required-message="Please enter your email" required/>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <input type="text" class="form-control p-4" id="subject" placeholder="Subject" name="subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+                                    required data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
                                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message" name="message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
+                                    required data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                    Message</button>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send Message</button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
@@ -560,6 +559,16 @@
     video.pause();
     video.currentTime = 0;
   }
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+        if (!this.checkValidity()) {
+            event.preventDefault(); // Prevent form submission if fields are empty
+            event.stopPropagation();
+        } else {
+            // Form is valid, you can perform additional actions here
+            // For example, you can send the form data to a server using AJAX
+        }
+        this.classList.add('was-validated');
+    });
     </script>
 </body>
 
