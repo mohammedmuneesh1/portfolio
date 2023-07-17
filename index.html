@@ -63,20 +63,22 @@
     <!-- Video Modal Start -->
     <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="stopVideo()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <!--16:9 aspect ratio -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" src="" id="video" controls></video>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <!-- Video Modal End -->
+      </div>
+      
+    
+    <!--Video Modal End -->
 
 
     <!-- Header Start -->
@@ -93,11 +95,12 @@
                     <div class="typed-text d-none">MERN STACK DEVELOPER</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="cv/MOHAMMED MUNEESH RESUME.pdf" class="btn btn-outline-light mr-5" target="_blank" download>Download CV</a>
-                        <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="intro-video/intro-video.mp4" data-target="#videoModal">
+                        <br>
+                        
+                        <button id="myintrov" type="button" class="btn-play" data-toggle="modal" data-src="intro-video/intro-video.mp4" data-target="#videoModal">
                             <span></span>
-                        </button>
-                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                          </button>
+                          <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
                     </div>
                 </div>
             </div>
@@ -545,6 +548,18 @@
                 }
             })
         })
+  
+
+
+
+        
+    </script>
+    <script lang="Javascript">
+         function stopVideo() {
+    var video = document.getElementById('video');
+    video.pause();
+    video.currentTime = 0;
+  }
     </script>
 </body>
 
