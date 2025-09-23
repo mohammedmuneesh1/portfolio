@@ -30,6 +30,126 @@
         *{
             scroll-behavior: smooth;
         }
+            .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem !important;
+        }
+
+        .portfolio-item {
+            margin-top: 1rem !important;
+            flex: 1 1 calc(33.333% - 1rem);
+            gap:10px;
+            min-width: 280px;
+            margin-bottom: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-item {
+                flex: 1 1 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        .portfolio-item .position-relative {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 0.375rem;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-btn {
+            opacity: 1;
+        }
+
+        .portfolio-btn a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Filter buttons */
+        #portfolio-flters li {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* #portfolio-flters li.active {
+            background-color: #007bff !important;
+            color: white !important;
+            border-color: #007bff !important;
+        } */
+
+        /* #portfolio-flters li:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        } */
+
+        /* Isotope filtering */
+        .portfolio-item {
+            transition: all 0.5s ease;
+        }
+
+        .portfolio-item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        /* Force new rows for better alignment */
+        .portfolio-item:nth-child(4n+1) {
+            clear: left;
+        }
+
+        /* Section styling */
+        /* .text-primary {
+            color: #007bff !important;
+        }
+
+        .bg-primary {
+            background-color: #007bff !important;
+        } */
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: white;
+        }
     </style>
 </head>
 
@@ -90,10 +210,11 @@
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Mohammed Muneesh</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">MERN STACK DEVELOPER</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Mohammed Muneesh E K</h1>
+                    <h1 class="typed-text-output d-inline font-weight-normal text-white"></h1>
+                    <div class="typed-text d-none font-weight-bold" style="font-weight: 600;">Full Stack Developer</div>
+                    
+                    <!-- <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="cv/MOHAMMED MUNEESH RESUME.pdf" class="btn btn-outline-light mr-5" target="_blank" download>Download CV</a>
                         <br>
                         
@@ -101,7 +222,8 @@
                             <span></span>
                           </button>
                           <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </div>
@@ -121,20 +243,39 @@
                     <img class="img-fluid rounded w-100" src="img/DP1.jpg" alt="">
                 </div>
                 <div class="col-lg-7">
-                    <h3 class="mb-4">MERN FULL STACK DEVELOPER</h3>
-                    <p style="text-align: justify;">skilled MERN stack developer with a passion for creating robust and efficient web applications. With several years of experience, I have honed my skills in MongoDB, Express.js, React.js, and Node.js, enabling me to build dynamic and interactive web solutions.</p>
+                    <h3 class="mb-4"> FULL STACK DEVELOPER</h3>
+      <p style="text-align: justify;">
+    🚀 Skilled and enthusiastic MERN Stack Developer with 2 years of hands-on experience in building robust, scalable, and high-performance web applications.
+</p>           <div class="typed-text d-none font-weight-bold" style="font-weight: 600;">Full Stack Developer</div>
+
+<p style="text-align: justify;">
+    I specialize in developing full-stack solutions using MongoDB, Express.js, React.js, Next.js, and Node.js, 
+    with a strong focus on creating dynamic, responsive, and user-centric web experiences.
+</p>
+
+<p style="text-align: justify;">
+    I am passionate about leveraging modern web technologies and best practices to deliver efficient, maintainable, and optimized code.
+    Whether it’s implementing server-side rendering with Next.js for improved performance and SEO, 
+    designing RESTful APIs with Express and Node.js, or creating intuitive front-end interfaces with React.js,  
+    I aim to craft solutions that solve real-world problems.
+</p>
+
+<p style="text-align: justify;">
+    Committed to continuous learning and innovation, I thrive in collaborative environments and enjoy turning complex requirements into seamless applications.
+</p>
+
                     <div class="row mb-3">
                         <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Mohammed Muneesh E K</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">19 March 2022</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Bachelor Of Computer Application</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">6 Months</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">2 Years</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">91+ 9645476000</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">mohammedmuneeshek@gmail.com</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Erukulanga Nedungat House Chendappuraya,676305,Malappuram,Kerala</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
                     </div>
                     <a href="#contact" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="cv/MOHAMMED MUNEESH RESUME.pdf" class="btn btn-outline-primary" download>My CV</a>
+                    <a href="cv/Mohammed-Muneesh-E-K+CV.pdf" class="btn btn-outline-primary" download>My CV</a>
                 </div>
             </div>
         </div>
@@ -153,9 +294,22 @@
                 <div class="col-lg-6">
                     <h3 class="mb-4">My Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
+
+
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Bachelor Of Computer Application</h5>
+                            <h5 class="font-weight-bold mb-1">Master of Computer Applications (MCA) - Ongoing (Distance Education)</h5>
+                            <p class="mb-2"><strong>Indira Gandhi National Open University (IGNOU) </strong> | <small>2025 – Present</small></p>
+                           <p style="text-align: justify;">
+                            Pursuing MCA from Indira Gandhi National Open University (IGNOU),
+                             a prestigious and flexible distance learning institution in India. The program focuses on advanced concepts of computer applications, software development, data structures, algorithms,
+                              database management, computer networks, and web technologies, designed to equip students with practical and theoretical knowledge for a career in IT and software engineering.
+                            </p>
+                        </div>
+                        
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bachelor Of Computer Applications</h5>
                             <p class="mb-2"><strong>University of Calicut</strong> | <small>2020 - 2023</small></p>
                             <p style="text-align: justify;">BCA is a three-year undergraduate degree program that focuses on computer applications and software development. It provides students with a strong foundation in computer science, covering topics such as programming languages, data structures, algorithms, software engineering, database management systems, computer networks, web development, and computer graphics. The curriculum balances theoretical knowledge with practical skills through classroom lectures, lab sessions, and project work. BCA opens up various career opportunities in the IT industry and serves as a stepping stone for further specialization or higher education in computer science.</p>
                         </div>
@@ -176,18 +330,47 @@
                 <div class="col-lg-6">
                     <h3 class="mb-4">My Expericence</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        
+                        
+                        
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web developer</h5>
-                            <p class="mb-2"><strong>Bridgeon</strong> | <small>2023 - 2024</small></p>
-                            <p style="text-align: justify;">During my internship, I actively participated in various stages of the web development process, including requirements gathering, design implementation, coding, and testing. I had the chance to work with different programming languages, such as HTML, CSS, and JavaScript, and became proficient in using popular frameworks and libraries.</p>
+                            <h5 class="font-weight-bold mb-1">Junior Full Stack Developer</h5>
+                            <p class="mb-2"><strong>Atonix Corp</strong> | <small> Jun 2024 - August 2025</small></p>
+                            <p  style="text-align: justify;">
+                         As a Junior Developer, I contributed to building e-commerce and business portfolio websites using modern web technologies. I collaborated with the UI/UX team to bring designs from Figma into fully functional websites, worked on backend services and APIs to support user authentication and product management, and managed databases for smooth performance. I also focused on improving website speed, writing clean and maintainable code, and actively collaborating with the team through Git version control. This role gave me valuable experience in delivering professional and user-friendly web applications.
+</p>
+                        </p>
+                            </p>
                         </div>
+
                         <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Full Stack Developer</h5>
+                            <p class="mb-2"><strong>Kodlar Innovations</strong> | <small> Jan 2024 - April 2024</small></p>
+                            <p  style="text-align: justify;">
+                          I worked on a 4-month contract as part of a 9-member team to build an Association Management System (AMS) software using Agile Scrum practices. My role involved developing backend features, creating admin and super admin dashboards, and working with databases to manage information efficiently. Beyond coding, I also contributed to team discussions and collaborated closely with others, which helped me improve both my technical skills and teamwork in a professional environment.
+                        </p>
+                            </p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">MERN Stack Developer Intern</h5>
+                            <p class="mb-2"><strong>Bridgeon Solutions</strong> | <small> June 2023 - Dec 2023</small></p>
+                            <p  style="text-align: justify;">
+                           During my internship , I contributed to building a full-stack furniture e-commerce application. I implemented secure features like JWT authentication, password hashing, and Joi validation, integrated Cloudinary for image uploads and Stripe for payments, and designed an admin dashboard for managing products, users, and orders. This experience strengthened my technical skills in the MERN stack and gave me hands-on exposure to developing real-world, production-ready solutions.
+                            </p>
+                        </div>
+
+
+
+                        <!-- <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Graphic Designing</h5>
                             <p class="mb-2"><strong</strong>FreeLancer <small>2000 - 2050</small></p>
                             <p style="text-align: justify;">As a freelance graphic designer, I specialize in flex designing and poster making, utilizing my creativity to deliver visually captivating designs that make a lasting impact. With a keen eye for detail and a passion for design, I have created numerous flex designs for diverse clients.</p>
-                        </div>
+                        </div> -->
                         <!-- <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Graphic Designer</h5>
@@ -229,18 +412,11 @@
                             <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">SQL</h6>
-                            <h6 class="font-weight-bold">80%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
+
+
+           
+
+                         <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">Javascript</h6>
                             <h6 class="font-weight-bold">90%</h6>
@@ -249,6 +425,92 @@
                             <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
+
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    
+         <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">React JS</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+               
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Next JS</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Node Js  </h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                
+                <div class="col-md-6">
+
+                           <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Express Js  </h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                         <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Tailwind CSS</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+
+                    
+         <!-- <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">SQL</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div> -->
+<!--                
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-bold">React JS</h6>
@@ -257,17 +519,88 @@
                         <div class="progress">
                             <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </div>
+                    </div> -->
+
+
                     <div class="skill mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Graphic Designing</h6>
-                            <h6 class="font-weight-bold">75%</h6>
+                            <h6 class="font-weight-bold">Postman</h6>
+                            <h6 class="font-weight-bold">85%</h6>
                         </div>
                         <div class="progress">
                             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
+
+
+                              <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Amazon S3 Bucket</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+
+                    
                 </div>
+
+
+                 <div class="col-md-6">
+
+
+                                 <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Typescript</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div> 
+
+
+
+            <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Cloudinary</h6>
+                            <h6 class="font-weight-bold">75%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    
+            <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Mongo DB</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+            <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Context API</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+               
+                    
+
+                 </div>
+
+
+
             </div>
         </div>
     </div>
@@ -282,38 +615,95 @@
                 <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
             </div>
             <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                
+                
+                <!-- <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Web Design</h4>
                     </div>
                     <p style="text-align: justify;">I possess strong web design skills that allow me to create visually appealing and user-friendly websites. I have a deep understanding of design principles such as color theory, typography, layout composition, and visual hierarchy. I am proficient in using design tools like Adobe Photoshop, Illustrator, or Sketch to create mockups and wireframes.</p>
                     <a class="border-bottom border-primary text-decoration-none" href="https://www.webdesignerdepot.com/" target="_blank">Explore web design further</a>
-                </div>
+                </div> -->
+
+
+
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Development</h4>
+                        <h4 class="font-weight-bold m-0">Website Development</h4>
                     </div>
-                    <p style="text-align: justify;">Web development is an area where I've dedicated a significant amount of time and effort to build my expertise. I have a strong understanding of the core concepts and technologies that power modern websites.I have a solid foundation in both front-end and back-end web development. I'm passionate about creating functional, visually appealing, and user-friendly websites.</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="https://blog.thefirehoseproject.com/posts/5-web-development-blogs-you-should-be-reading/">Explore Web Development Further</a>
+                    <p style="text-align: justify;">
+                    I have a strong foundation in both front-end and back-end development, with experience in building modern, 
+functional, and user-friendly websites.I’m passionate about creating visually appealing and efficient solutions that deliver seamless user experiences and  results.
+                    </p>
+
+
+                    <a class="border-bottom border-primary text-decoration-none" href="https://blog.hubspot.com/website/website-development" target="_blank">Explore Web Development Further</a>
                 </div>
+
+
                 <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                      <i class="fa fa-2x fa-server service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Backend Development</h4>
+                    </div>
+                    <p
+                    style="text-align: justify;"
+                    >
+I specialize in building secure and scalable backend systems using Node.js, Express, and TypeScript. 
+From user authentication to API creation, I ensure that applications run smoothly with strong performance 
+and reliable server-side logic.
+</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://medium.com/@briannqc/backend-101-introduction-2e3c2ef448">Expand Your Backend Development Proficiency</a>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                     <i class="fa fa-2x fa-database service-icon bg-primary text-white mr-3"></i>
+
+                        <h4 class="font-weight-bold m-0">Database Management</h4>
+                    </div>
+                    <p
+                    style="text-align: justify;"
+                    >
+I work with MongoDB to design, manage, and optimize databases for efficient data storage and retrieval. 
+My focus is on creating structured, reliable, and high-performance database solutions that keep applications 
+fast and scalable.
+</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://www.multiview.com/association/blog/10-simple-rules-for-effective-database-management">Go Deeper into Database Management</a>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">App  Development</h4>
                     </div>
                     <p style="text-align: justify;">I have valuable experience developing Android apps using Java for the front-end and Python for the backend. This combination of technologies enables me to create powerful and dynamic mobile applications. I take a tailored approach to app development, ensuring each project receives my full dedication. I prioritize creating unique and specialized applications.</p>
                     <a class="border-bottom border-primary text-decoration-none" href="https://www.techaheadcorp.com/blog/android-app-development-comprehensive-guide-for-success/">Explore App Development Further</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                </div> -->
+
+
+                <!-- <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fab bx bxl-figma service-icon bg-primary text-white mr-3" style="font-size:50px;"></i> 
                         <h4 class="font-weight-bold m-0">Figma Designing</h4>
                     </div>
                     <p style="text-align: justify;">I have extensive experience in Figma designing and I'm fully confident in my abilities to utilize this powerful tool to its fullest potential. With a deep understanding of Figma's features and capabilities, I can efficiently create stunning and functional designs for user interfaces (UI) and user experiences (UX).Rest assured, I will give my absolute best, dedicating 100%.</p>
                     <a class="border-bottom border-primary text-decoration-none" href="https://www.figma.com/blog/" target="_blank">Explore Figma further</a>
-                </div>
+                </div> -->
+
+
+
+<!-- 
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3" ></i>
@@ -323,15 +713,21 @@
                     <p style="text-align: justify;">
                         I excel in logical and systematic problem-solving, analyzing challenges from diverse perspectives to identify root causes. I analyze complex problems, using my analytical skills and creativity to generate innovative solutions. My problem-solving skills thrive in dynamic environments, enabling me to overcome obstacles and achieve success.</p>
                     <a class="border-bottom border-primary text-decoration-none" href="https://magnet4blogging.net/problem-solving-blogger/" target="_blank">Explore Problem Solving Further</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
+                </div> -->
+
+
+
+                <!-- <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Content Creating</h4>
                     </div>
                     <p style="text-align: justify;">I excel in creating engaging and impactful content across diverse mediums. I craft compelling articles, visually appealing multimedia, and captivating social media posts. With strong storytelling skills, I adapt content for different target audiences, prioritizing their needs and preferences.I prioritize audience understanding and tailored content.</p>
                     <a class="border-bottom border-primary text-decoration-none" href="https://blog.hubspot.com/marketing/content-creation" target="_blank">Explore Content Creating More</a>
-                </div>
+                </div> -->
+
+
+
             </div>
         </div>
     </div>
@@ -339,66 +735,406 @@
 
 
     <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Website</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Photography</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/linkedin-logo.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/linkedin.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/photography2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/w3school1.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/w3schools.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/photography4.jpg" alt="">
-                    </div>
-                </div>
+<!-- Portfolio Start -->
+<div class="container-fluid pt-5 pb-3" style="margin-bottom:10vh;" id="portfolio">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="position-relative d-flex align-items-center justify-content-center mb-5">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke:1px #dee2e6;">Gallery</h1>
+            <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+        </div>
+
+        <!-- Filters -->
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <ul class="list-inline" id="portfolio-flters">
+                    <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".fullstack">Full Stack</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".frontend">Frontend</li>
+                    <li class="btn btn-sm btn-outline-primary m-1" data-filter=".backend">Backend</li>
+                </ul>
             </div>
         </div>
+
+        <!-- Portfolio Items -->
+        <div class="row g-4 portfolio-container">
+
+            <!-- Full Stack Projects -->
+
+            <!-- V-WELL SALOON START -->
+            <div class="col-12 col-sm-6 col-md-4 portfolio-item fullstack">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/V-WELL.jpeg" alt="Full Stack Project">
+                    <h2>    v well saloon </h2>
+                  
+            <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/V-WELL.jpeg" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a href="https://www.vwellsalon.com/" target="_blank" rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+                    
+                </div>
+            </div>
+            <!-- V-WELL SALOON END -->
+
+
+   <!-- TEILY START -->
+
+            <div class="col-12 col-sm-6 col-md-4 portfolio-item fullstack">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/TEILY.jpeg" alt="Full Stack Project">
+                    
+                    
+                                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/TEILY.jpeg" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://teily.in/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+            </div>
+
+   <!-- TEILY END -->
+
+
+   <!-- EDHAS INTERIOR START -->
+
+            <div class="col-12 col-sm-6 col-md-4 portfolio-item frontend">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/EDHAS-INTERIOR.png" alt="Full Stack Project">
+                    
+                    
+                                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/EDHAS-INTERIOR.png" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://edhashomedecor.com/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+            </div>
+
+   <!-- EDHAS INTERIOR END -->
+
+   <!-- MOTORIUM START -->
+      <div class="col-12 col-sm-6 col-md-4 portfolio-item fullstack ">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/motorium.jpeg" alt="Full Stack Project">
+                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/motorium.jpeg" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://motorium-website.vercel.app/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+        </div>
+   <!-- MOTORIUM END -->
+
+
+   <!-- ATONIX CORP START -->
+ <div class="col-12 col-sm-6 col-md-4 portfolio-item frontend ">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/atonix-corp.png" alt="Full Stack Project">
+                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/atonix-corp.png" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://www.atonix.in/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+        </div>
+   <!-- ATONIX CORP END -->
+   
+   
+   <!-- BESYNC START -->
+    <div class="col-12 col-sm-6 col-md-4 portfolio-item frontend ">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/besync-screenshot.png" alt="Full Stack Project">
+                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/besync-screenshot.png" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://www.besync.in/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+        </div>
+   <!-- BESYNC END -->
+
+   <!-- EQUITORIA START -->
+ <div class="col-12 col-sm-6 col-md-4 portfolio-item frontend ">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/work-img/equitoria-screenshot.png" alt="Full Stack Project">
+                <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+    <!-- Lightbox Link -->
+    <a href="img/work-img/equitoria-screenshot.png" data-lightbox="portfolio" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; color:white;">
+        <!-- <i class="fa fa-plus text-white fs-2"></i> -->
+        <h2 style="color:white; font-size:15px; margin:10px 0 5px; text-align:center;">Project Preview</h2>
+    </a>
+
+    <!-- Website Link -->
+<a 
+href="https://equitoria-global.vercel.app/"
+ target="_blank"
+  rel="noopener noreferrer"
+   style="color:#fff; 
+   /* background-color: #007bff; */
+          padding:10px 18px; 
+          border-radius:30px; 
+          text-align: center;
+
+          font-size:15px; 
+          font-weight:600; 
+          text-decoration:none; 
+          display:flex;
+          align-items: center;
+
+          transition:all 0.3s ease;">
+    Visit Website 
+</a>
+
+</div>
+          
+
+
+                </div>
+        </div>
+
+   <!-- EQUITORIA START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="col-12 col-sm-6 col-md-4 portfolio-item fullstack">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/linkedin-logo.png" alt="Full Stack Project">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/linkedin.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-12 col-sm-6 col-md-4 portfolio-item fullstack">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/linkedin-logo.png" alt="Full Stack Project">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/linkedin.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Frontend Projects -->
+
+<!--             
+            <div class="col-12 col-sm-6 col-md-4 portfolio-item frontend">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/photography2.jpg" alt="Frontend Project">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/photography2.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Backend Projects -->
+            
+            
+            <!-- <div class="col-12 col-sm-6 col-md-4 portfolio-item backend">
+                <div class="position-relative overflow-hidden rounded">
+                    <img class="img-fluid w-100" src="img/w3school1.png" alt="Backend Project">
+                    <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                        <a href="img/w3schools.jpg" data-lightbox="portfolio">
+                            <i class="fa fa-plus text-white fs-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+        </div>
     </div>
-    <!-- Portfolio End -->
+</div>
+<!-- Portfolio End -->
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Testimonial Start -->
@@ -529,6 +1265,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
     <script>
         $("#contactForm").submit((e)=>{
             e.preventDefault()
@@ -537,22 +1274,21 @@
                 data:$("#contactForm").serialize(),
                 method:"post",
                 success:function (response){
-                    // alert("Form submitted successfully")
+                    alert("Form submitted successfully")
                     window.location.reload()
                     //window.location.href="https://google.com"
                 },
                 error:function (err){
+                    console.log('error',err)
                     alert("Something Error")
     
                 }
             })
         })
-  
-
-
-
         
     </script>
+
+    
     <script lang="Javascript">
          function stopVideo() {
     var video = document.getElementById('video');
